@@ -64,4 +64,12 @@ fn main() {
     };
 
     println!("The value of number is: {}", number);
+    
+    let num = foo();
+    
+    println!("The value of num is: {}", num);
+}
+
+fn foo() -> u32 {
+    return 5;
 }

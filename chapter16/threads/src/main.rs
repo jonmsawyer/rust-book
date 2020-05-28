@@ -2,6 +2,9 @@ use std::thread;
 use std::time::Duration;
 use std::sync::mpsc;
 
+use std::rc::Rc;
+use std::cell::RefCell;
+
 fn main() {
     let handle = thread::spawn(|| {
         for i in 1..10 {
@@ -89,4 +92,29 @@ fn main() {
     for received in rx {
         println!("Got: {}", received);
     }
+    
+    let vals = vec![1,2,3,4];
+    
+    for val in vals.iter() {
+        println!("val is {}", *val);
+    }
+    
+    for val in vals.iter() {
+        println!("val is {}", *val);
+    }
+    
+    #[derive(Debug)]
+    struct Foo {
+        val: Rc<RefCell<i32>>
+    }
+    
+    let val = Rc::new(RefCell::new(42));
+    
+    let a = Foo { val };
+    
+    println!("a.val is {:?}", a.val);
+    
+    //if let Some(num) = *(a.val).unwrap() {
+    //    println!("a.val unwrapped = {}", num);
+    //}
 }
