@@ -1,0 +1,3 @@
+var searchIndex={};
+searchIndex["hello"] = {"doc":"","i":[[3,"ThreadPool","hello","",null,null],[11,"new","","Create a new ThreadPool.",0,[[["usize"]],["threadpool"]]],[11,"execute","","",0,[[["self"],["f"]]]],[11,"from","","",0,[[["t"]],["t"]]],[11,"into","","",0,[[],["u"]]],[11,"try_from","","",0,[[["u"]],["result"]]],[11,"try_into","","",0,[[],["result"]]],[11,"borrow","","",0,[[["self"]],["t"]]],[11,"borrow_mut","","",0,[[["self"]],["t"]]],[11,"type_id","","",0,[[["self"]],["typeid"]]]],"p":[[3,"ThreadPool"]]};
+addSearchOptions(searchIndex);initSearch(searchIndex);
