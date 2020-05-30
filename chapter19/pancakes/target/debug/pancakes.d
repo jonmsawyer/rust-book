@@ -1,0 +1,1 @@
+C:\rust_projects\rust-book\chapter19\pancakes\target\debug\pancakes.exe: C:\rust_projects\rust-book\chapter19\hello_macro\hello_macro_derive\src\lib.rs C:\rust_projects\rust-book\chapter19\hello_macro\src\lib.rs C:\rust_projects\rust-book\chapter19\pancakes\src\main.rs
