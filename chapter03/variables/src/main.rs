@@ -35,7 +35,7 @@ fn main() {
     
     println!("x: {}, y: {}, z: {}", x, y, z);
     
-    //println!("tup: {}", tup);
+    println!("tup: {:?}", tup);
     
     let x: (i32, f64, u8) = (500, 6.4, 1);
     
@@ -52,8 +52,9 @@ fn main() {
     let months = ["January", "February", "March", "April", "May", "June", "July",
                   "August", "September", "October", "November", "December"];
     
+    println!("3rd month: {}", months[2]);
+    
     let a: [i32; 5] = [1, 2, 3, 4, 5];
     
-    //println!("a: {}", a);
-    println!("3rd month: {}", months[2]);
+    println!("a: {:?}", a);
 }
