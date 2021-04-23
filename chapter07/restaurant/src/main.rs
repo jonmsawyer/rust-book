@@ -6,7 +6,7 @@ use std::collections::HashMap;
 
 use rand::Rng;
 
-use restaurant;
+//use restaurant; // import unneeded, as it's part of the lib crate
 
 
 //fn function1() -> fmt::Result {
