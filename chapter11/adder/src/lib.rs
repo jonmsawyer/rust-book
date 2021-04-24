@@ -1,3 +1,5 @@
+use std::fmt::{Display, Formatter, Error};
+
 #[derive(Debug)]
 pub struct Rectangle {
     length: u32,
@@ -23,6 +25,12 @@ pub struct Guess {
     value: i32,
 }
 
+impl Display for Guess {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
+        write!(f, "[value: {}]", self.value)
+    }
+}
+
 impl Guess {
     pub fn new(value: i32) -> Guess {
         if value < 1 {
@@ -36,6 +44,10 @@ impl Guess {
         Guess {
             value
         }
+    }
+
+    pub fn value(&self) -> i32 {
+        self.value
     }
 }
 
@@ -76,7 +88,11 @@ mod tests {
     #[test]
     fn greeting_contains_name() {
         let result = greeting("Carol");
-        assert!(result.contains("Carol"), "Greeting did not contain name, value was `{}`", result);
+        assert!(
+            result.contains("Carol"),
+            "Greeting did not contain name, value was `{}`",
+            result
+        );
     }
     
     #[test]
@@ -89,5 +105,11 @@ mod tests {
     #[should_panic(expected = "Guess value must be less than or equal to 100")]
     fn greater_than_100() {
         Guess::new(200);
+    }
+
+    #[test]
+    fn guess_formatted() {
+        let guess = Guess::new(38);
+        assert_eq!(format!("{}", guess), String::from("[value: 38]"));
     }
 }
